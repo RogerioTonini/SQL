@@ -12,7 +12,7 @@ AS
  BEGIN
 
 	DECLARE @Cod_Idioma INT, 
-			@Lingua		VARCHAR(30)
+		@Lingua     VARCHAR(30)
 
 	SELECT @Cod_Idioma = @@DEFAULT_LANGID
 	SELECT @Lingua     = @@LANGUAGE
