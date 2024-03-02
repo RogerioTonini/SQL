@@ -1,0 +1,18 @@
+USE [DATA_BASE]
+GO
+
+BEGIN
+	DECLARE @Data DATE
+	SET @Data = ('0218-07-25 07:05:01')
+
+	IF YEAR(CAST(@Data AS DATE)) < 1753 OR YEAR(CAST(@Data AS DATE)) > 9999
+		PRINT 'ANO INVALIDO'
+	ELSE
+		SELECT
+			COUNT(*)
+		FROM 
+			[Tabela]
+		WHERE 
+			[Campo] = @Data
+END
+GO
